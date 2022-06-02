@@ -1,0 +1,225 @@
+{% extends "root.html" %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+ <header class="header">
+     <img src="{%static 'img/westyle white_2.png' %}"  alt="">
+     <div class="nav-menu">
+         <ul>
+             <li>
+                 <a href="">Home</a>
+             </li>
+            <li>
+                 <a href="#about">About</a>
+            </li>
+
+            <li >
+                 <a href="">Gallery</a>
+            </li>
+             
+            <li>
+                <a href="{%url 'Blog' %}">Blog</a>
+            </li>
+        
+            <li class='contact'>
+                <a href="#contact"> Contact us</a>
+            </li>
+            
+         </ul>
+     </div>
+     <div class="hamburger">
+         <span class="bar"></span>
+         <span class="bar"></span>
+        <span class="bar"></span>
+         
+     </div>
+ </header> 
+
+ <section class="section1">
+     <div class="text">
+        <h1>
+            We organize grandiose events.
+        </h1>
+         <p> WeStyle is created to organize and manage events. Whether it is corporate, small parties in apartments or even fashion events. Our aim is to take care of everything from beginning to end, including choosing the right location, booking equipment and promoting it on social media!</p>
+        <br>
+         <a href="#" class="btn1">  Contact us</a>
+         <a href="#" class="btn2">  About us</a>
+     </div>
+     
+    
+ </section>
+
+ <section class="section2">
+
+     
+     
+ </section>
+
+ <section class="section3" id="about">
+      <div class="sec-head">
+          <h1>Why us</h1>
+          <br>
+          <p>As a leading event management company, we have well structured offers that stands us out and here are reasons why you should consider working with us
+        </p>
+        <br>
+        <br>
+      </div>
+
+
+      <div class="ball">
+
+        <div class="a">
+            <img src="{%static 'img/carbon_manage-protection.png' %}" alt="ggg">
+            <h3>Top-notch Standard</h3>
+            <p>Getting the best possible result is the least you can always expect from us.</p>
+        </div>
+        <div class="b">
+            <div class="b1" >
+                <img src="{%static 'img/icon-park-solid_success.png' %}" alt="ggg">
+                <h3>Excellent Track record</h3>
+                <p>Offering the best service obtainable to all our numerous clients.</p>
+            </div>
+           
+            <div class="b2">
+                <img src="{%static 'img/carbon_task-approved.png' %}" alt="ggg">
+                <h3>Proven integrity</h3>
+                <p>Testimonies can do the talking but much more are the wonderful memories we give.</p>
+            </div>
+        </div>
+        
+       
+    </div>
+ </section>
+
+ <section class="section4" id="contact">
+      <div class="sec-head">
+          <h1>Ready to organize your next event ?</h1>
+          <p>Our main goal is to create every event as if it were our own and make each event special, 
+              unique and unforgettable for both the organizers and their guests.
+        </p>
+        <a href="#" class="btn1">  Contact us</a>
+      </div>
+
+
+      
+      <div class="img">
+          <img src="{%static 'img/contact.png'%}"  alt="ff">
+      </div>
+       
+    </div>
+ </section>
+<section class="testimonial">
+    <h1>What our clients are saying</h1>
+<br><br>
+
+    <div class="body">
+        <div class="sub-body">
+      
+            <div class="slide-row" id="slide">
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, itaque quasi? Explicabo libero tempora dolorum maxime laudantium, voluptatem temporibus iure? Numquam dolore, doloribus vel enim dolor laborum quae explicabo. Eum!
+                        Autem error, esse quos iste sed mollitia totam temporibus expedita quis, ab quas? Doloribus asperiores deserunt, consectetur architecto cupiditate molestiae vel laudantium facere, eum minima, dolorum suscipit praesentium distinctio voluptatem?</p>
+                        <h3>Sarah</h3>
+                        <p>qqq</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="{%static 'img/Look beyond poster_2.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, itaque quasi? Explicabo libero tempora dolorum maxime laudantium, voluptatem temporibus iure? Numquam dolore, doloribus vel enim dolor laborum quae explicabo. Eum!
+                        Autem error, esse quos iste sed mollitia totam temporibus expedita quis, ab quas? Doloribus asperiores deserunt, consectetur architecto cupiditate molestiae vel laudantium facere, eum minima, dolorum suscipit praesentium distinctio voluptatem?</p>
+                        <h3>Sarah</h3>
+                        <p>qqq</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="{%static 'img/Look beyond poster_2.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, itaque quasi? Explicabo libero tempora dolorum maxime laudantium, voluptatem temporibus iure? Numquam dolore, doloribus vel enim dolor laborum quae explicabo. Eum!
+                        Autem error, esse quos iste sed mollitia totam temporibus expedita quis, ab quas? Doloribus asperiores deserunt, consectetur architecto cupiditate molestiae vel laudantium facere, eum minima, dolorum suscipit praesentium distinctio voluptatem?</p>
+                        <h3>Sarah</h3>
+                        <p>qqq</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="{%static 'img/Westyle black_3.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, itaque quasi? Explicabo libero tempora dolorum maxime laudantium, voluptatem temporibus iure? Numquam dolore, doloribus vel enim dolor laborum quae explicabo. Eum!
+                        Autem error, esse quos iste sed mollitia totam temporibus expedita quis, ab quas? Doloribus asperiores deserunt, consectetur architecto cupiditate molestiae vel laudantium facere, eum minima, dolorum suscipit praesentium distinctio voluptatem?</p>
+                        <h3>Sarah</h3>
+                        <p>qqq</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="{%static 'img/Look beyond poster_2.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+        
+    </div>
+    </section>
+    
+   
+    
+    <footer class="footer">
+        <div>
+            
+        </div>
+        <div class="a">
+            <h1>WeStyle</h1>
+            <p>We began in 1973, with the goal of serving clients better by delivering unexpected creativity.</p>
+        </div>
+        <div class="b">
+            <h2>Pages</h2>
+            <div class="nav-footer">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                   <li>
+                        <a href="#about">About</a>
+                   </li>
+       
+                   <li >
+                        <a href="">Gallery</a>
+                   </li>
+                    
+                   <li>
+                       <a href="{%url 'Blog' %}">Blog</a>
+                   </li>
+               
+                   <li>
+                       <a href="#contact"> Contact us</a>
+                   </li>
+                   
+                </ul>
+            </div>
+    </div>
+    </div>
+    <div class="c">
+        <h2>Address</h2>
+        <p>1, Obokun Street, Off Coker Road, Ilupeju, Lagos | 0810 751 1512 | <br> info@westyleevents.com</p>
+    </div>
+    <div class="d">
+        <h2>GALLERY</h2>
+    </div>
+</footer>
+{% endblock content %}
+
+
+
+<!-- https://www.templatemonsterpreview.com/demo/58523.html -->

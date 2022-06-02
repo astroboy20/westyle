@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+    <style>
+        
+        .alert{
+            text-align: center;
+        }
+    </style>
+</head>
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h1 class="text-center display-inline">Delete post</h1>
+            
+            <p> Are you sure you want to delete delete this post? </p>
+        <div class="form-group">
+            <form method="POST">
+                {%csrf_token%}
+                <button class="btn btn-danger">Delete Post</button>
+            </form>
+        </div>
+
+        </div>
+
+        {%else%}
+        <h1>You are not allowed here</h1>
+    {% endif %}
+    
+
+    {%else%}
+    <h1 class="alert">Oopps you are not an ADMIN  ! <br> Procced to  <a href="{%url 'Blog' %}">HOME</a></h1>
+{% endif %}
+
+{% endblock content %}
+

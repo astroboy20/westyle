@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+<br>
+{% if user.id == post.author.id %}
+  
+{% endif %}
+<!-- {{user.id}} -->
+{{post.author.id}}
+<div class="container">
+    <h1 class="text-center">Add post</h1>
+    <br>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form | crispy}}
+        <br>
+        <button class="btn btn-success">Submit</button>
+    </form>
+</div>
+</div>
+
+<!-- <script>
+    var name = "{{user.username}}"
+    console.log(name)
+    document.getElementById("user").value = name
+</script> -->
+{% endblock content %}
+

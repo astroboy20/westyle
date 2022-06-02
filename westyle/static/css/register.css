@@ -1,0 +1,18 @@
+.body{
+    margin: 5% auto;
+}
+hr{
+    margin: 2% 0;
+}
+.login{
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    hr{
+        margin: 2% 0;
+    }
+    .login{
+        text-align: center;
+    }
+}

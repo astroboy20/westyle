@@ -1,0 +1,28 @@
+
+
+.body{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.details{
+    /* line-height:; */
+    padding: 2%;
+    text-align: justify;
+}
+.header{
+    text-align: left;
+}
+.header h1{
+    text-transform: uppercase;
+}
+img{
+    width: 100%;
+    /* margin: 25%; */
+}
+
+@media screen and (max-width:800px) {
+    img{
+        width: 100%;
+    }
+}

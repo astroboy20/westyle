@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/blog.css' %}">
+<header class="header">
+  <img src="{%static 'img/westyle white_2.png' %}"  width="10%" alt="">
+  <div class="nav-menu">
+      <ul>
+          {% if user.is_authenticated %}
+                <!-- <a href="{% url 'Add_Post' %}">
+                  <li>Add Post</li>
+                </a> -->
+                <a href="{%url 'logout' %}">
+                  <li>Log Out</li></a>
+            {%else%}
+                <a href="{%url 'register' %}">
+                  <li>Get started</li></a>
+
+          {% endif %}
+       
+        
+          
+      </ul>
+  </div>
+  <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+     <span class="bar"></span>
+      
+  </div>
+</header> 
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1>Westyle</h1>
+            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            {% if user.is_authenticated %}
+            <p>
+              <a href="{% url 'Add_Post' %}" class="btn btn-success">Add Post</a>
+              
+            </p>
+            {%else%}
+
+            <a href="{% url 'register' %}" class="btn btn-success">Add Post</a>
+            {% endif %}
+           
+          </div>
+        </div>
+      </section>
+<div class="body">
+  
+</div>
+    {% for post in object_list  %}
+
+    <!-- <li>
+        <a href="{%url 'article_detail' post.pk%}">{{post.title}} </a>- {{post.author}} <br>
+        {{post.body}}
+    
+    </li> -->
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+    
+          <div class="d-flex justify-content-between">
+            <div class="col">
+                <div class="card shadow-sm">
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+                </svg> -->
+                <img src="{{post.header_image.url}}" alt=""   class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+                <div class="card-body">
+                    <p class="card-text">{{post.title}} - {{post.author}}</p>
+                    <!-- <small>{{post.body | slice:":200"}}</small> -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{%url 'article_detail' post.pk%}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                        {% if user.is_authenticated %}
+                          {% if user.id == post.author.id %}
+                            <a type="button" href="{%url 'update_post' post.pk %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                            <a type="button" href="{%url 'delete_post' post.pk %}" class="btn btn-sm btn-outline-secondary">Delete</a>
+                          {% endif %}
+                          
+                        {% endif %}
+                        
+                    </div>
+                    
+                    <small class="text-muted">{{post.post_date}}</small>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+    {% endfor %} 
+
+    <footer class="footer">
+      <img src="{%  static 'img/westyle white_2.png' %}"/>
+  
+      <div class="nav-menu">
+          <ul>
+              <a href="{%url 'Home' %}"><li>Home</li></a>
+              <a href="">
+                  <li>Events</li></a>
+              <a href="">
+                  <li>Blog</li></a>
+          </ul>
+      </div>
+  </footer>
+{% endblock content %}
+
+

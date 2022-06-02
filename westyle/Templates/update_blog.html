@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+<br>
+<br>
+<head>
+    <style>
+        .alert{
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+        <div class="container">
+            <h1 class="text-center">Update post</h1>
+            <br>
+            <br>
+        <div class="form-group">
+            <form method="POST">
+                {%csrf_token%}
+                {{form | crispy}}
+                <br>
+                <button class="btn btn-success">Update</button>
+            </form>
+        </div>
+        {%else%}
+        <h1>You are not allowed here</h1>
+    {% endif %}
+    
+
+    </div>
+    {%else%}
+    <h1 class="alert">Oopps you are not an ADMIN  ! <br> Procced to  <a href="{%url 'Blog' %}">HOME</a></h1>
+{% endif %}
+
+{% endblock content %}
+
