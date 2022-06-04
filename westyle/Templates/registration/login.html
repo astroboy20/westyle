@@ -3,6 +3,11 @@
 {% block content %}
 <br>
 <br>
+<style>
+    .text{
+        text-align:center;
+    }
+</style>
 
 <div class="container">
     <h1 class="text-center">Login</h1>
@@ -10,10 +15,26 @@
 <div class="form-signin">
     <form method="POST" class="form-control">
         {%csrf_token%}
-        {{form | crispy}}
+        <div class="mb-3">
+            <label for="Username" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="Username" >
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
         <br>
         <button class="btn btn-success">Submit</button>
+
+        
     </form>
+
+    <br>
+        <hr>
+        <div class="text">
+            You don't have an account? procced to  <a href="{% url 'register' %}" >Register</a>
+        </div>
+       
 </div>
 
 </div>

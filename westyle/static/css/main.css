@@ -54,6 +54,13 @@ body{
         color:#fff;
         transition: 0.5s ease;
     }
+    .contact a:hover{
+        background: #F7669D;
+        border-radius: 5px;
+        padding: 15px;
+        color:#fff;
+        transition: 0.5s ease;
+    }
     .section1{
         text-align: center;
         /* color: #05d769; */

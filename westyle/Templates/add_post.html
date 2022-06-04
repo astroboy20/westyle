@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
 {% block content %}
 <br>
 <br>
@@ -14,7 +14,9 @@
 <div class="form-group">
     <form method="POST" enctype="multipart/form-data">
         {%csrf_token%}
-        {{form | crispy}}
+        {{form.media }}
+        {{form.as_p}}
+        {{form.media}}
         <br>
         <button class="btn btn-success">Submit</button>
     </form>

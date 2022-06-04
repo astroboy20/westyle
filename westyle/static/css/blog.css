@@ -8,7 +8,8 @@
     justify-content: space-between;
     padding:0 6%;
     align-items: center;
-    background-color: #000;
+    background-color:#3A3089;
+    
 }
 
 .hamburger{
@@ -31,15 +32,25 @@
     transition: 0.5s ease-out;
 }
 .nav-menu ul a:hover {
-   background-color: #05d769;
+   background-color: #F7669D;
    padding: 5px;
    border-radius: 5px;
 }
+.body1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .footer{
-    background: #000;
+    background: #3A3089;
     text-align: center;
     padding: 2%;
 }
 .footer img{
     width: 10%;
 }
+
+.col{
+width: 20%;
+}
+

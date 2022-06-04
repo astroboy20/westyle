@@ -13,10 +13,9 @@
         <h1>{{post.title}}</h1>
         <small>By: {{post.author}}</small> <br>
     </div>
-    
-<hr>
+    <hr>
 <div class="details">
-    {{post.body}}
+    {{post.body | safe }}
 </div>
 
 <br>
