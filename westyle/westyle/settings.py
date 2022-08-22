@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'Blog',
     'Logic',
     'Users',
-    'crispy_forms',
+     'crispy_forms',
     'ckeditor',
 ]
 

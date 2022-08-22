@@ -1,20 +1,13 @@
-from dataclasses import fields
-from pyexpat import model
-from statistics import mode
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
-from .forms import PostForm,EditForm
-from .models import Post
+from .forms import CommentForm, PostForm,EditForm
+from .models import Comment, Post
 from django.contrib import messages
-# Create your views here.
-# def Blog(request):
-#     return render(request, "blog.html")
+
 
 class Blog(ListView):
     model =Post
     template_name ="blog.html"
-    # ordering = ['-id']
     ordering = ['-post_date']
     ordering = ['-id']
     
@@ -27,6 +20,17 @@ class Addpost(CreateView):
     form_class = PostForm
     template_name = "add_post.html" 
     # fields = '__all__'
+
+class Addcomment(CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = "add_post.html" 
+    success_url = reverse_lazy('Blog')
+    # fields = '__all__'
+
+    def form_valid(self,form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)
     
 class Updatepost(UpdateView):
     model = Post 

@@ -317,6 +317,7 @@ body{
         padding: 0 6%;
         position: sticky;
         top: 0;
+        height: 70px;
     }
   
     .header img{
@@ -331,17 +332,19 @@ body{
         position: absolute;
         list-style: none;
         left: -100%;
-        top: 200px;
+        top: 70px;
         background-color: #344AC1;
         width: 80%;
-        margin: 0 10%;
-        height: 600px;
+        height: 300px;
+        margin: 0 20%;
+        /* height: 600px; */
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
     }
     .nav-menu ul{
         list-style: none;
+        text-align: center;
     }
     .nav-menu ul li {
         padding: 10%;
@@ -352,6 +355,7 @@ body{
        text-decoration: none;
        color: #fff;
        transition: 0.5s ease-out;
+       width: 100%;
     }
     .nav-menu ul a:hover {
        background-color:#F7669D;

@@ -4,9 +4,6 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/details.css' %}">
 <div class="container body">
-    <div class="img">
-        <img src="{{post.header_image.url}}" alt="">
-    </div>
     <br>
     <br>
     <div class="header">
@@ -14,12 +11,36 @@
         <small>By: {{post.author}}</small> <br>
     </div>
     <hr>
+
+    <div class="img">
+        <img src="{{post.header_image.url}}" alt="">
+    </div>
 <div class="details">
     {{post.body | safe }}
 </div>
 
-<br>
-<a href="{%url 'Blog' %}" class="btn btn-success">Go back</a>
+<div class="comment">
+    <a href="{% url 'add_comment' post.pk %}">Add comment</a>
+
+    <h1>Comments..</h1>
+    {% if not post.comments.all %}
+        No comments yet .... <a href="{% url 'add_comment' post.pk %}">Add One</a>
+    {%else %}
+        {%for comment in post.comments.all%}
+        <div class="comment_content">
+            <div class="head">
+                {{comment.name}} - {{comment.date_added}}
+            </div>
+            <div>
+                {{comment.body}}
+            </div>
+            <br>
+        </div>
+            
+        {%endfor%}
+    {% endif %}
+</div>
+
 </div>
 
 {% endblock content %}

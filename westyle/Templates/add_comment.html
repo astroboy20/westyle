@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+{% block content %}
+<br>
+<br>
+
+<!-- {{user.id}} -->
+
+<div class="container">
+    <h1 class="text-center">Add comment</h1>
+    <br>
+<div class="form-group">
+    <form method="POST">
+        {%csrf_token%}
+        
+        {{form.as_p}}
+        
+        <br>
+        <button class="btn btn-success">Submit</button>
+    </form>
+</div>
+</div>
+
+<!-- <script>
+    var name = "{{user.username}}"
+    console.log(name)
+    document.getElementById("user").value = name
+</script> -->
+{% endblock content %}
+

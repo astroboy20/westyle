@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path ,include 
 from Logic.views import Home
-from Blog.views import Blog, ArticleDetail,Addpost,Updatepost,Deletepost
+from Blog.views import Blog, ArticleDetail,Addpost,Updatepost,Deletepost,Addcomment
 from Users.views import UserRegistration
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,6 +29,7 @@ urlpatterns = [
     path('addPost', Addpost.as_view(), name="Add_Post"),
     path('article/edit/<int:pk>', Updatepost.as_view(), name="update_post"),
     path('article/edit/<int:pk>/delete', Deletepost.as_view(), name="delete_post"),
+    path('article/<int:pk>/comment',Addcomment.as_view(),name= 'add_comment' ),
     path('members/', include('django.contrib.auth.urls')),
     path('register/',UserRegistration.as_view(), name='register' ),
 ]+ static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
