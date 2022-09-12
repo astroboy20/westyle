@@ -22,10 +22,10 @@
 <div class="comment">
     <a href="{% url 'add_comment' post.pk %}">Add comment</a>
 
-    <h1>Comments..</h1>
+    <!-- <h1>Comments..</h1>
     {% if not post.comments.all %}
         No comments yet .... <a href="{% url 'add_comment' post.pk %}">Add One</a>
-    {%else %}
+    {%else %} -->
         {%for comment in post.comments.all%}
         <div class="comment_content">
             <div class="head">
