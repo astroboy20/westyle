@@ -307,12 +307,12 @@ body{
     .footer{
         font-size: 16px;
         background:#3A3089;
-        text-align: center;
-        padding: 2%;
+        text-align: left;
+        padding: 2% 6%; 
         display: flex;
         justify-content: space-between;
     }
-    .footer .a,.footer .b,.footer .c,.footer .d{
+    .footer .a,.footer .b,.footer .c{
         text-align: left;
         color: #fff;
         

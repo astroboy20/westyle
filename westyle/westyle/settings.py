@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'Blog',
     'Logic',
     'Users',
-     'crispy_forms',
+    'crispy_forms',
     'ckeditor',
+    'crispy_bootstrap5',
 ]
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 CKEDITOR_CONFIGS = {
     'default': {

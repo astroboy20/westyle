@@ -24,7 +24,7 @@ class Addpost(CreateView):
 class Addcomment(CreateView):
     model = Comment
     form_class = CommentForm
-    template_name = "add_post.html" 
+    template_name = "add_comment.html" 
     success_url = reverse_lazy('Blog')
     # fields = '__all__'
 
