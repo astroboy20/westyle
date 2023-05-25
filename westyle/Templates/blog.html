@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{%static 'css/blog.css' %}">
+
+<head>
+  <link rel="stylesheet" href="{%static 'css/blog.css' %}">
+  <title>{%block title%}Blog{%endblock%}</title>
+</head>
 <header class="header">
   <img src="{%static 'img/westyle white_2.png' %}"  width="10%" alt="">
   <div class="nav-menu">
@@ -13,8 +17,8 @@
                 <a href="{%url 'logout' %}">
                   <li>Log Out</li></a>
             {%else%}
-                <a href="{%url 'register' %}">
-                  <li>Get started</li></a>
+                <a href="">
+                  <li></li></a>
 
           {% endif %}
        
@@ -39,10 +43,10 @@
             <p>
               <a href="{% url 'Add_Post' %}" class="btn btn-success">Add Post</a>
               
-            </p>
+            </p> 
             {%else%}
 
-            <a href="{% url 'register' %}" class="btn btn-success">Add Post</a>
+            <a href="" class="btn"></a>
             {% endif %}
            
           </div>

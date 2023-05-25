@@ -53,4 +53,9 @@
 .col{
 width: 20%;
 }
-
+p .btn1{
+    background:#F7669D;
+    color:#fff;
+    transition: 0.5s ease;
+   
+}
