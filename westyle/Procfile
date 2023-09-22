@@ -1,1 +1,1 @@
-web: gunicorn westyle.wsgi --log-file -
+web: gunicorn westyle/westyle.wsgi --log-file -
