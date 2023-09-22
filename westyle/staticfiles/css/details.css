@@ -1,0 +1,41 @@
+
+
+.body{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.details{
+    /* line-height:; */
+    padding: 2%;
+    text-align: justify;
+}
+.header{
+    text-align: left;
+}
+.header h1{
+    text-transform: uppercase;
+}
+.img img{
+    width: 100%;
+    /* margin: 25%; */
+}
+.comment{
+    text-align: left;
+}
+.comment .comment_content{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+
+}
+.comment_content .head{
+   text-transform: capitalize;
+   font-weight: 700;
+   
+}
+@media screen and (max-width:800px) {
+    img{
+        width: 100%;
+    }
+}
