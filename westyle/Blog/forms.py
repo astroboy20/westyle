@@ -1,4 +1,3 @@
-from tkinter.ttk import Widget
 from django import forms 
 from .models import Comment, Post
 
